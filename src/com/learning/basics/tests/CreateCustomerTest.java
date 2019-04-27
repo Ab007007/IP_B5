@@ -9,6 +9,7 @@ public class CreateCustomerTest
 {
 	public static void main(String[] args) 
 	{
+		@SuppressWarnings("unused")
 		WebDriver driver= ActitimeUtils.getMyDriver(ConfigReader.getMyConfigValue("browser"));
 		ActitimeUtils.launchApp(ConfigReader.getMyConfigValue("url"));
 		ActitimeUtils.login(ConfigReader.getMyConfigValue("username"), ConfigReader.getMyConfigValue("password"));
