@@ -43,9 +43,16 @@ public class ActitimeUtils extends DriverUtils {
 		System.out.println("Customer Created Successfully...");
 	}
 	/**
+	 * @throws InterruptedException 
 	 * 
 	 */
 	public static void validateSuccessMessage() {
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		WebDriverWait waitForVisible = new WebDriverWait(driver, 20);
 		WebElement ele = waitForVisible.until(ExpectedConditions.visibilityOf(getMyElement("class", "toast")));
 		System.out.println("Success message is displayed.....");
